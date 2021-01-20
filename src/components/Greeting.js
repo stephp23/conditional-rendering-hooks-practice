@@ -5,9 +5,10 @@ function Greeting(props) {
   const isLoggedIn = props.isLoggedIn
   if (isLoggedIn) {
     return <UserGreeting />
+  } else {
+    return <GuestGreeting />
   }
-  return <GuestGreeting />
 }
 
-export default Greeting
+export default Greeting;
 

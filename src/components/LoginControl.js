@@ -1,24 +1,24 @@
 import { useState } from "react";
-import Greeting from './Greeting';
-import LoginButton from './LoginButton';
-import LogoutButton from './LogoutButton';
+import Greeting from "./Greeting";
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
 
 function LoginControl() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLoginClick = () => {
-    setIsLoggedIn(true)
+    setIsLoggedIn(true);
   }
 
   const handleLogoutClick = () => {
-    setIsLoggedIn(false)
+    setIsLoggedIn(false);
   }
 
   let button;
 
   if (isLoggedIn) {
     button = <LogoutButton onClick={handleLogoutClick} />
-  }else {
+  } else {
       button = <LoginButton onClick={handleLoginClick} />
   }
 
@@ -27,7 +27,7 @@ function LoginControl() {
       <Greeting isLoggedIn={isLoggedIn} />
       {button}
     </div>
-  )
+  );
 }
   
-export default LoginControl
+export default LoginControl;

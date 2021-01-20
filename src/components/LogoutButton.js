@@ -6,4 +6,4 @@ function LogoutButton(props) {
   )
 }
 
-export default LogoutButton
+export default LogoutButton;
